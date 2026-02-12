@@ -11,11 +11,9 @@ document.addEventListener('DOMContentLoaded', function() {
   function goToPage(page) {
     if(page < 1 || page > totalPages) return;
 
-    // Mostrar página correcta
     document.querySelectorAll('.news-page').forEach(p => p.style.display = 'none');
     document.getElementById('page'+page).style.display = 'flex';
 
-    // Actualizar botones
     document.querySelectorAll('.btn-group button[data-page]').forEach(btn => {
       btn.classList.remove('btn-primary');
       btn.classList.add('btn-outline-primary');
@@ -29,7 +27,6 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('prev-page').disabled = page===1;
     document.getElementById('next-page').disabled = page===totalPages;
 
-    // Actualizar contador
     const start = (page-1)*itemsPerPage + 1;
     const end = Math.min(page*itemsPerPage, totalItems);
     document.getElementById('currentPageStart').textContent = start;
