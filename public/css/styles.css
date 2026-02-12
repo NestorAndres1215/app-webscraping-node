@@ -1,0 +1,91 @@
+body {
+  transition: background-color 0.5s;
+}
+
+/* Card hover moderno */
+.card-hover {
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* Badge categoría */
+.card-hover .badge-category {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-bottom-left-radius: 0.8rem;
+  background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+  color: #fff;
+}
+
+/* Icono grande en card */
+.card-hover .card-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(13, 110, 253, 0.1);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  transition: transform 0.3s;
+}
+.card-hover:hover .card-icon {
+  transform: scale(1.2);
+}
+
+/* Título card */
+.card-hover .card-title a {
+  color: #212529;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.card-hover:hover .card-title a {
+  color: #0d6efd;
+}
+
+/* Botones */
+.card-hover .btn-read {
+  background: #0d6efd;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  transition: background 0.3s, transform 0.3s;
+}
+.card-hover .btn-read:hover {
+  background: #0b5ed7;
+  transform: translateX(5px);
+}
+
+/* Dark mode */
+body.dark {
+  background-color: #121212;
+  color: #eee;
+}
+body.dark .card {
+  background-color: #1e1e1e;
+  color: #eee;
+}
+body.dark .card-hover .card-icon {
+  background-color: rgba(13, 110, 253, 0.2);
+}
+
+/* Animación icono */
+.fa-beat-fade {
+  animation: beat-fade 2s infinite;
+}
+@keyframes beat-fade {
+  0%, 100% { opacity: 1; transform: scale(1);}
+  50% { opacity: 0.7; transform: scale(1.1);}
+}
