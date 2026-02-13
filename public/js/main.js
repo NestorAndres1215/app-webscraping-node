@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
     AOS.refresh();
   }
 
-  // Eventos
+
   document.querySelectorAll('button[data-page]').forEach(btn=>{
     btn.addEventListener('click', ()=> goToPage(parseInt(btn.dataset.page)));
   });
