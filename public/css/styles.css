@@ -28,7 +28,6 @@ body {
   color: #fff;
 }
 
-/* Icono grande en card */
 .card-hover .card-icon {
   width: 60px;
   height: 60px;
@@ -41,34 +40,25 @@ body {
   margin-bottom: 1rem;
   transition: transform 0.3s;
 }
-.card-hover:hover .card-icon {
-  transform: scale(1.2);
-}
 
-/* Título card */
 .card-hover .card-title a {
   color: #212529;
   text-decoration: none;
   transition: color 0.3s;
 }
-.card-hover:hover .card-title a {
-  color: #0d6efd;
-}
 
-/* Botones */
+
 .card-hover .btn-read {
   background: #0d6efd;
   color: #fff;
   font-weight: 500;
   border-radius: 0.5rem;
-  transition: background 0.3s, transform 0.3s;
 }
 .card-hover .btn-read:hover {
   background: #0b5ed7;
   transform: translateX(5px);
 }
 
-/* Dark mode */
 body.dark {
   background-color: #121212;
   color: #eee;
@@ -81,11 +71,3 @@ body.dark .card-hover .card-icon {
   background-color: rgba(13, 110, 253, 0.2);
 }
 
-/* Animación icono */
-.fa-beat-fade {
-  animation: beat-fade 2s infinite;
-}
-@keyframes beat-fade {
-  0%, 100% { opacity: 1; transform: scale(1);}
-  50% { opacity: 0.7; transform: scale(1.1);}
-}
